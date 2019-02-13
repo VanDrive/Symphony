@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<table border="1">
+    {% for article in articles %}
+        <tr>
+        <td>{{ article.id }}</td>
+        <td>{{ article.name }}</td>
+        <td>{{ article.description}}</td>
+        <td>{{ article.createdAt|date('y\m\d') }}</td>
+        <td><a href="{{ path('article_edit', {'id': article.id}) }}">update</a></td>
+        <td><a href="{{ path('article_delete', {'id': article.id}) }}">delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+

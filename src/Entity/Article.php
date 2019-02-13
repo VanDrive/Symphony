@@ -1,5 +1,5 @@
 <?php
-// src/Entity/Product.php
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -83,6 +83,4 @@ class Article
     {
         $this->created_at = $created_at;
     }
-
-    // ... getter and setter methods
 }
